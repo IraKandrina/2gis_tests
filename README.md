@@ -6,8 +6,6 @@ ____
 
 * <a href="#tools">Технологии и инструменты</a>
 
-* <a href="#cases">Примеры автоматизированных тест-кейсов</a>
-
 * <a href="#jenkins">Сборка в Jenkins</a>
 
 * <a href="#console">Запуск из терминала</a>
@@ -38,4 +36,30 @@ ____
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://www.atlassian.com/ru/software/jira/"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </p>
+<a id="console"></a>
+____
+<a id="jenkins"></a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/><a name="Сборка"></a><a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+____
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15hw/"><img src="images/screenshot/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+</p>
+
+## Команды для запуска из терминала
+___
+***Локальный запуск:***
+```bash  
+gradle clean smoke
+```
+
+***Удалённый запуск через Jenkins:***
+```bash  
+clean X5Group_test
+"-Dbrowser=${browser}"
+"-DbrowserVersion=${browserVersion}"
+"-DbrowserSize=${browserSize}"
+"-DbaseUrl=${baseUrl}"
+"-DremoteUrl=${remoteUrl}"
+```
+___
 

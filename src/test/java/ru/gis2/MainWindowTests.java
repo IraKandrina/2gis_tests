@@ -14,11 +14,11 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@Tag("2Gis")
 public class MainWindowTests extends RemoteTestBase {
     @Test
-    @Tag("remote")
     @DisplayName("Проверка названия города")
-    public void verifyCityHeading() {
+    public void verifyCityHeadingTest() {
         step("Открыть главную страницу сайта", () -> {
             open(baseUrl);
         });
@@ -30,9 +30,7 @@ public class MainWindowTests extends RemoteTestBase {
     @ValueSource(strings = {"Поесть", "Аптеки", "Красота"})
     @DisplayName("Отображение значения в строке при выборе кнопки")
     @ParameterizedTest(name = "{0}")
-    //@DisplayName("Отображение значения в строке при выборе кнопки ")
-    @Tag("remote")
-    void pageHeaderValues(String value) {
+    void verifyValuesInSearchInputTest(String value) {
         step("Открыть главную страницу сайта", () -> {
             open(baseUrl);
         });
@@ -44,7 +42,7 @@ public class MainWindowTests extends RemoteTestBase {
         });
     }
 
-    static Stream<Arguments> addressValues() {
+    static Stream<Arguments> addressValuesTest () {
         return Stream.of(
                 Arguments.of("Царство матрасов", "ТК Торговый двор, проспект Науки, 21 к1, Санкт-Петербург"),
                 Arguments.of("Сиртаки", "Невский проспект, 102, Санкт-Петербург"),
@@ -55,9 +53,7 @@ public class MainWindowTests extends RemoteTestBase {
     @MethodSource
     @DisplayName("Отображение адреса при вводе значения ")
     @ParameterizedTest(name="{0} - {1}")
-    //@DisplayName("Отображение при вводе значения адреса ")
-    @Tag("remote")
-    void addressValues(String item, String addressValue){
+    void addressValuesTest(String item, String addressValue){
         step("Открыть главную страницу сайта", () -> {
             open(baseUrl);
         });

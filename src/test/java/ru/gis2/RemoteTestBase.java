@@ -21,7 +21,11 @@ public class RemoteTestBase {
         Configuration.browserVersion = System.getProperty("browserVersion","100.0");
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.remote = System.getProperty("remoteUrl","https://user1:1234@selenoid.autotests.cloud/wd/hub");
-        Configuration.pageLoadStrategy = "eager";
+
+//        Configuration.baseUrl = "https://2gis.ru/spb";
+//        Configuration.browser = "chrome";
+//        Configuration.browserSize = "1920x1080";
+                Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
