@@ -39,10 +39,10 @@ ____
 <a id="console"></a>
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/><a name="Сборка"></a><a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15hw/"><img src="images/screenshot/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/"><img src="images/screenshot/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 ## Команды для запуска из терминала
