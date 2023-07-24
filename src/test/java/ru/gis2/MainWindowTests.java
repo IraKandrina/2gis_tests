@@ -28,7 +28,7 @@ public class MainWindowTests extends RemoteTestBase {
     }
 
     @ValueSource(strings = {"Поесть", "Аптеки", "Красота"})
-    @DisplayName("Отображение значения в строке при выборе кнопки")
+    @DisplayName("Отображение значения в строке поиска при выборе кнопки")
     @ParameterizedTest(name = "{0}")
     void verifyValuesInSearchInputTest(String value) {
         step("Открыть главную страницу сайта", () -> {

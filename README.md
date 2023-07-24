@@ -36,30 +36,42 @@ ____
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
 <a href="https://www.atlassian.com/ru/software/jira/"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </p>
-<a id="console"></a>
+
 ____
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/"><img src="images/screenshot/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/"><img src="images/screenshot/jenkinsBuild.png" alt="Jenkins" width="850"/></a>  
 </p>
 
+<a id="console"></a>
 ## Команды для запуска из терминала
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean smoke
+gradle clean gis_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean
+${TASK}
+"-Dbrowser=${BROWSER}"
+"-DbrowserSize=${BROWSER_SIZE}"
+"-DbrowserVersion=${BROWSER_VERSION}"
+"-DbaseUrl=${BASE_URL}"
+"-DremoteUrl=${REMOTE_URL}"
 ```
 ___
+<a id="allure"></a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/7/allure/)</a>
+___
+
+### *Основная страница отчёта*
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screenshot/allureMain.png" width="850">  
+</p>  
+
 
