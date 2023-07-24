@@ -74,4 +74,61 @@ ___
 <img title="Allure Overview Dashboard" src="images/screenshot/allureMain.png" width="850">  
 </p>  
 
+### *Тест-кейсы*
+
+<p align="center">  
+<img title="Allure Tests" src="images/screenshot/allureTestCase.png" width="850">  
+</p>
+
+### *Графики*
+
+<p align="center">  
+<img title="Allure Graphics" src="images/screenshot/allureGraph.png" width="850">
+</p>
+
+___
+<a id="allure-testops"></a>
+## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3542/dashboards">Allure TestOps</a>
+____
+### *Allure TestOps Dashboard*
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="images/screenshot/allureTestOpsMain.png" width="850">  
+</p>  
+
+### *Ручные тест-кейсы*
+
+<p align="center">  
+<img title="Allure Tests" src="images/screenshot/allureTestOpsManual.png" width="850">  
+</p>
+
+### *Авто тест-кейсы*
+
+<p align="center">  
+<img title="Allure TestOps Tests" src="images/screenshot/allureTestOpsAuto.png" width="850">  
+</p>
+
+___
+<a id="jira"></a>
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-803">Jira</a>
+____
+<p align="center">  
+<img title="Jira" src="images/screenshot/jira.png" width="850">  
+</p>
+
+____
+<a id="telegram"></a>
+## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+____
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screenshot/telegram.png" width="550">
+</p>
+
+____
+<a id="video"></a>
+## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+____
+<p align="center">
+<img title="Selenoid Video" src="images/video/video.gif" width="550" height="350"  alt="video">   
+</p>
 
