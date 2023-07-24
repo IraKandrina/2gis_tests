@@ -48,7 +48,7 @@ test {
     useJUnitPlatform()
 }
 
-task gis2_test(type: Test) {
+task gis_test(type: Test) {
     useJUnitPlatform{
         includeTags("2Gis")
     }
