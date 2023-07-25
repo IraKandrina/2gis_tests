@@ -38,6 +38,22 @@ ____
 </p>
 
 ____
+
+- В данном проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования Selenide.
+- В качестве сборщика был использован - <code>Gradle</code>.
+- Использованы фреймворки <code>JUnit 5</code> и [Selenide](https://selenide.org/).
+- При прогоне тестов браузер запускается в [Selenoid](https://aerokube.com/selenoid/).
+- Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
+- Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
+
+Содержание Allure-отчета:
+* Шаги теста;
+* Скриншот страницы на последнем шаге;
+* Page Source;
+* Логи браузерной консоли;
+* Видео выполнения автотеста.
+
+____
 <a id="jenkins"></a>
 ## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/)</a>
 ____
@@ -63,6 +79,13 @@ ${TASK}
 "-DbaseUrl=${BASE_URL}"
 "-DremoteUrl=${REMOTE_URL}"
 ```
+где:
+
+- <code>BROWSER</code> – браузер, в котором будут выполняться тесты.
+- <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты.
+- <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты.
+- <code>BASE_URL</code> – URL, по которому будет открываться тестируемый сайт.
+- <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 ___
 <a id="allure"></a>
 ## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/7/allure/)</a>
