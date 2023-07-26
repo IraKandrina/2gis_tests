@@ -63,6 +63,39 @@ public class MainWindowTests extends RemoteTestBase {
         step("Проверить отображение адреса заданного объекта", () -> {
             $("div._1tdquig").should(text(addressValue));
         });
+    }
 
+    @Test
+    @DisplayName("Проверка отображения правого меню")
+    public void verifyRightMenuVisibilityTest() {
+        step("Открыть главную страницу сайта", () -> {
+            open(baseUrl);
+        });
+        step("Нажать кнопку Меню в правом верхнем углу главной страницы", () -> {
+            $("button[aria-label='Меню']").click();
+        });
+        step("Проверить отображение правого меню на главной странице", () -> {
+            $(withText("Корзина")).should(exist);
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка отображения корзины")
+    public void verifyCartVisibilityTest() {
+        step("Открыть главную страницу сайта", () -> {
+            open(baseUrl);
+        });
+        step("Нажать кнопку Меню в правом верхнем углу главной страницы", () -> {
+            $("button[aria-label='Меню']").click();
+        });
+        step("Проверить отображение правого меню на главной странице", () -> {
+            $(withText("Корзина")).should(exist);
+        });
+        step("Нажать пункт меню Корзина", () -> {
+            $(withText("Корзина")).click();
+        });
+        step("Проверить отображение окна Корзина", () -> {
+            $(withText("Корзина пуста")).should(exist);
+        });
     }
 }
