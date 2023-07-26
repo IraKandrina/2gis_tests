@@ -88,7 +88,7 @@ ${TASK}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/7/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/10/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
