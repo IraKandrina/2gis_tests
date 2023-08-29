@@ -1,26 +1,29 @@
-package ru.gis2;
+package ru.gis2.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.gis2.config.WebConfig;
 import ru.gis2.helpers.Attach;
+import org.aeonbits.owner.ConfigFactory;
 
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class RemoteTestBase {
+public class TestBase {
+    static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = System.getProperty("baseUrl","https://2gis.ru/spb");
-        Configuration.browser = System.getProperty("browser","chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion","100.0");
-        Configuration.browserSize = System.getProperty("browserSize","1920x1080");
-        Configuration.remote = System.getProperty("remoteUrl","https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.baseUrl = config.baseUrl();
+        Configuration.browser = config.browser();
+        Configuration.browserVersion = config.browserVersion();
+        Configuration.browserSize = config.browserSize();
+        if (config.isRemote()) {
+            Configuration.remote = config.remoteUrl();
+        }
         Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -41,8 +44,9 @@ public class RemoteTestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
-
+        if (config.videoStorage() != null) {
+            Attach.addVideo();
+        }
         closeWebDriver();
     }
 }

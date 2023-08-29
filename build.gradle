@@ -23,10 +23,11 @@ repositories {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.12.4",
-            "org.junit.jupiter:junit-jupiter:5.9.2",
+            "com.codeborne:selenide:6.16.1",
+            "org.junit.jupiter:junit-jupiter:5.9.3",
             "org.slf4j:slf4j-simple:2.0.7",
-            'io.qameta.allure:allure-selenide:2.19.0')
+            "io.qameta.allure:allure-selenide:2.19.0",
+            "org.aeonbits.owner:owner:1.0.12")
 }
 
 tasks.withType(JavaCompile) {
@@ -50,6 +51,6 @@ test {
 
 task gis_test(type: Test) {
     useJUnitPlatform{
-        includeTags("2Gis")
+        includeTags("ui")
     }
 }
