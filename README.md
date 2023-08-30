@@ -70,10 +70,10 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/2gis-ui-final/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/"><img src="images/screenshot/jenkinsBuild.png" alt="Jenkins" width="850"/></a>  
+<a href="https://jenkins.autotests.cloud/job/2gis-ui-final/"><img src="images/screenshot/jenkinsBuild.png" alt="Jenkins" width="850"/></a>  
 </p>
 
 <a id="console"></a>
@@ -103,7 +103,7 @@ ${TASK}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/20-irina_kandrina-15-2gis-tests/10/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/2gis-ui-final/15/allure/![telegram.png](..%2F..%2FDownloads%2Fimages%2Fscreenshot%2Ftelegram.png))</a>
 ___
 
 ### *Основная страница отчёта*
