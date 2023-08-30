@@ -2,6 +2,7 @@ package ru.gis2.tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -19,7 +20,7 @@ import static io.qameta.allure.SeverityLevel.*;
 @Epic(value = "2Gis UI tests")
 @Feature(value = "St.Petersburg Website")
 @Story("Панель поиска")
-//@Tag("ui")
+@Tag("ui")
 public class SearchPanelTests extends TestBase {
     MainPage mainPage = new MainPage();
     SearchPanelComponent searchPanel = new SearchPanelComponent();

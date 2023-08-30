@@ -2,6 +2,7 @@ package ru.gis2.tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.gis2.pages.MainPage;
 import ru.gis2.pages.components.CartComponent;
@@ -14,7 +15,7 @@ import static io.qameta.allure.SeverityLevel.MINOR;
 @Epic(value = "2Gis UI tests")
 @Feature(value = "St.Petersburg Website")
 @Story("Корзина")
-//@Tag("ui")
+@Tag("ui")
 public class CartTests extends TestBase {
     MainPage mainPage = new MainPage();
     RightMenuComponent rightMenu = new RightMenuComponent();
