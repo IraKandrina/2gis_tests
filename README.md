@@ -103,7 +103,7 @@ ${TASK}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/2gis-ui-final/15/allure/![telegram.png](..%2F..%2FDownloads%2Fimages%2Fscreenshot%2Ftelegram.png))</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/2gis-ui-final/15/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
