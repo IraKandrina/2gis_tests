@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RightMenuComponent {
     public static final String CART = "Корзина";
+    public static final String ORGANIZATION = "Добавить организацию";
 
     public RightMenuComponent checkCartMenuItem() {
         $(withText(CART)).should(exist);
@@ -16,4 +17,15 @@ public class RightMenuComponent {
         $(withText(CART)).click();
         return this;
     }
+
+    public RightMenuComponent checkOrganizationMenuItem() {
+        $(withText(ORGANIZATION)).should(exist);
+        return this;
+    }
+
+    public RightMenuComponent clickOrganizationMenuItem() {
+        $(withText(ORGANIZATION)).click();
+        return this;
+    }
+
 }

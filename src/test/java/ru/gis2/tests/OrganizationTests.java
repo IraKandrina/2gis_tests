@@ -1,11 +1,9 @@
 package ru.gis2.tests;
 
 import io.qameta.allure.*;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import ru.gis2.pages.MainPage;
-import ru.gis2.pages.CartPage;
+import ru.gis2.pages.OrganizationPage;
 import ru.gis2.pages.components.RightMenuComponent;
 
 import static io.qameta.allure.Allure.step;
@@ -14,16 +12,16 @@ import static io.qameta.allure.SeverityLevel.MINOR;
 @Owner("IraKandrina")
 @Epic(value = "2Gis UI tests")
 @Feature(value = "St.Petersburg Website")
-@Story("Корзина")
+@Story("Организация")
 @Tag("ui")
-public class CartTests extends TestBase {
+public class OrganizationTests extends TestBase {
     MainPage mainPage = new MainPage();
     RightMenuComponent rightMenu = new RightMenuComponent();
-    CartPage cart = new CartPage();
+    OrganizationPage organizationPage = new OrganizationPage();
 
     @Severity(MINOR)
     @Test
-    @DisplayName("Проверка отображения корзины")
+    @DisplayName("Проверка отображения окна добавления организации")
     public void verifyCartVisibilityTest() {
         step("Открыть главную страницу сайта", () -> {
             mainPage.openPage();
@@ -32,13 +30,13 @@ public class CartTests extends TestBase {
             mainPage.openRightMenu();
         });
         step("Проверить отображение пункта меню", () -> {
-            rightMenu.checkCartMenuItem();
+            rightMenu.checkOrganizationMenuItem();
         });
-        step("Нажать пункт меню Корзина", () -> {
-            rightMenu.clickCartMenuItem();
+        step("Нажать пункт меню Добавить организацию", () -> {
+            rightMenu.clickOrganizationMenuItem();
         });
-        step("Проверить отображение окна Корзина", () -> {
-            cart.checkEmptyCart();
+        step("Проверить отображение окна Новая организация", () -> {
+            organizationPage.checkPageTitle();
         });
     }
 }
