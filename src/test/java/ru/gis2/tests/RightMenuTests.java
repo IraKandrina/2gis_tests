@@ -29,7 +29,7 @@ public class RightMenuTests extends TestBase {
             mainPage.openRightMenu();
         });
         step("Проверить отображение пункта меню", () -> {
-            rightMenu.checkMenuItem("Корзина");
+            rightMenu.checkCartMenuItem();
         });
     }
 }

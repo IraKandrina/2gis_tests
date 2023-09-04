@@ -32,10 +32,10 @@ public class CartTests extends TestBase {
             mainPage.openRightMenu();
         });
         step("Проверить отображение пункта меню", () -> {
-            rightMenu.checkMenuItem("Корзина");
+            rightMenu.checkCartMenuItem();
         });
         step("Нажать пункт меню Корзина", () -> {
-            rightMenu.clickMenuItem("Корзина");
+            rightMenu.clickCartMenuItem();
         });
         step("Проверить отображение окна Корзина", () -> {
             cart.checkEmptyCart();

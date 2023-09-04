@@ -5,13 +5,15 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RightMenuComponent {
-    public RightMenuComponent checkMenuItem(String item) {
-        $(withText(item)).should(exist);
+    public static final String CART = "Корзина";
+
+    public RightMenuComponent checkCartMenuItem() {
+        $(withText(CART)).should(exist);
         return this;
     }
 
-    public RightMenuComponent clickMenuItem(String item) {
-        $(withText(item)).click();
+    public RightMenuComponent clickCartMenuItem() {
+        $(withText(CART)).click();
         return this;
     }
 }
