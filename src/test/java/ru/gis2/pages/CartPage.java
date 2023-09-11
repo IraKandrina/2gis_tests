@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CartPage {
     public static final String EMPTY_CART = "Корзина пуста";
+
     public CartPage checkEmptyCart() {
         $(withText(EMPTY_CART)).should(exist);
         return this;

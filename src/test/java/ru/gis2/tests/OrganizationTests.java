@@ -13,7 +13,6 @@ import static io.qameta.allure.SeverityLevel.MINOR;
 @Epic(value = "2Gis UI tests")
 @Feature(value = "St.Petersburg Website")
 @Story("Организация")
-@Tag("ui")
 public class OrganizationTests extends TestBase {
     MainPage mainPage = new MainPage();
     RightMenuComponent rightMenu = new RightMenuComponent();

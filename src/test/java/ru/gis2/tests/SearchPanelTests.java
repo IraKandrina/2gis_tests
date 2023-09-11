@@ -2,7 +2,6 @@ package ru.gis2.tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -20,10 +19,10 @@ import static io.qameta.allure.SeverityLevel.*;
 @Epic(value = "2Gis UI tests")
 @Feature(value = "St.Petersburg Website")
 @Story("Панель поиска")
-@Tag("ui")
 public class SearchPanelTests extends TestBase {
     MainPage mainPage = new MainPage();
     SearchPanelComponent searchPanel = new SearchPanelComponent();
+
     @Severity(CRITICAL)
     @ValueSource(strings = {"Поесть", "Аптеки", "Красота"})
     @DisplayName("Отображение значения в строке поиска при выборе кнопки ")
@@ -44,10 +43,9 @@ public class SearchPanelTests extends TestBase {
             "Недвижимость, Продажа недвижимости",
             "Интересное, Интересное в городе"
     })
-
     @Severity(NORMAL)
     @DisplayName("Отображение подзаголовка при выборе кнопки ")
-    @ParameterizedTest (name = "{1} - {0}")
+    @ParameterizedTest(name = "{1} - {0}")
     void pageSubHeaderValues(String buttonValue, String header) {
         step("Открыть главную страницу сайта", () -> {
             mainPage.openPage();
@@ -60,7 +58,7 @@ public class SearchPanelTests extends TestBase {
         });
     }
 
-    static Stream<Arguments> addressValuesTest () {
+    static Stream<Arguments> addressValuesTest() {
         return Stream.of(
                 Arguments.of("Царство матрасов", "ТК Торговый двор, проспект Науки, 21 к1, Санкт-Петербург"),
                 Arguments.of("Сиртаки", "Невский проспект, 102, Санкт-Петербург"),
@@ -69,10 +67,10 @@ public class SearchPanelTests extends TestBase {
     }
 
     @Severity(NORMAL)
-    @MethodSource
+    @MethodSource("addressValuesTest")
     @DisplayName("Отображение адреса при вводе значения ")
-    @ParameterizedTest(name="{0} - {1}")
-    void addressValuesTest(String item, String addressValue){
+    @ParameterizedTest(name = "{0} - {1}")
+    void addressValuesTest(String item, String addressValue) {
         step("Открыть главную страницу сайта", () -> {
             mainPage.openPage();
         });

@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = config.baseUrl();
@@ -35,12 +36,12 @@ public class TestBase {
     }
 
     @BeforeEach
-    void addListener(){
+    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
-    void addAttachments(){
+    void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();

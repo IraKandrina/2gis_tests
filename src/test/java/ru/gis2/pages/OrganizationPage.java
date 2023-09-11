@@ -6,6 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class OrganizationPage {
     public static final String NEW_ORGANIZATION = "Новая организация";
+
     public OrganizationPage checkPageTitle() {
         $(withText(NEW_ORGANIZATION)).should(exist);
         return this;

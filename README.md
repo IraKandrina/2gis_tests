@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования для компании [2ГИС](https://info.2gis.ru/sankt-peterburg/) в городе Санкт-Петербург
+# Проект по автоматизации тестирования для компании [2ГИС](https://2gis.ru/spb) в городе Санкт-Петербург
 > Картографический сервис 2ГИС —  подробный справочник организаций с детальной картой городов и навигатор для автомобиля и пешеходов.
 >
 > ![2gis_banner](images/logo/banner.jpg)
@@ -104,7 +104,7 @@ ${TASK}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/2gis-ui-final/24/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/2gis-ui-final/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
